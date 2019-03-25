@@ -1,0 +1,16 @@
+# Pycharm Auto Generated Dir
+.idea/
+
+# Virtual Env
+venv/
+
+# Python Auto Generated Dir
+__pycache__/
+
+# DB
+*.sqlite3
+
+# Media
+media/
+
+.DS_store
