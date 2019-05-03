@@ -1,7 +1,11 @@
+import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-org_img = np.transpose(plt.imread('123.jpeg'), (2, 0, 1))
+img = cv2.imread('Image from iOS.jpg')
+imgYCC = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
+org_img = np.transpose(imgYCC, (2, 0, 1))
+print(org_img.shape)
 pd_img = np.pad(org_img, ((0, 0), (1, 1), (1, 1)), 'constant', constant_values=(0, 0))
 lbp_img = np.zeros_like(org_img)
 r, c = org_img[0].shape
